@@ -1014,9 +1014,9 @@ blockquote {
         -o-transition: 0.3s ease;
         -webkit-transition: 0.3s ease;
         transition: 0.3s ease; }
-      .mdl-layout__drawer .social-icons li a.facebook-link:hover i {
+      .mdl-layout__drawer .social-icons li a.youtube-link:hover i {
         color: #3b5998; }
-      .mdl-layout__drawer .social-icons li a.twitter-link:hover i {
+      .mdl-layout__drawer .social-icons li a.github-link:hover i {
         color: #55acee; }
       .mdl-layout__drawer .social-icons li a.linkedin-link:hover i {
         color: #007bb6; }
@@ -1219,9 +1219,9 @@ blockquote {
       -o-transition: 0.3s ease;
       -webkit-transition: 0.3s ease;
       transition: 0.3s ease; }
-    .about-sec .social-icons li a.facebook-link:hover i {
+    .about-sec .social-icons li a.youtube-link:hover i {
       color: #3b5998; }
-    .about-sec .social-icons li a.twitter-link:hover i {
+    .about-sec .social-icons li a.github-link:hover i {
       color: #55acee; }
     .about-sec .social-icons li a.linkedin-link:hover i {
       color: #007bb6; }
@@ -1719,9 +1719,9 @@ blockquote {
       -o-transition: 0.3s ease;
       -webkit-transition: 0.3s ease;
       transition: 0.3s ease; }
-    .footer-sec .social-icons li a.facebook-link:hover i {
+    .footer-sec .social-icons li a.youtube-link:hover i {
       color: #3b5998; }
-    .footer-sec .social-icons li a.twitter-link:hover i {
+    .footer-sec .social-icons li a.github-link:hover i {
       color: #55acee; }
     .footer-sec .social-icons li a.linkedin-link:hover i {
       color: #007bb6; }

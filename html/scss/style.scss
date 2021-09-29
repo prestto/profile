@@ -742,14 +742,14 @@ blockquote {
 					color:$color_2;
 					@include transition(.3s ease);
 				}
-				&.facebook-link {
+				&.youtube-link {
 					&:hover {
 						i {
 							color: rgb(59,89,152);
 						}
 					}
 				}
-				&.twitter-link {
+				&.github-link {
 					&:hover {
 						i {
 							color: rgb(85,172,238);
@@ -1026,14 +1026,14 @@ blockquote {
 					font-size:18px;
 					@include transition(.3s ease);
 				}
-				&.facebook-link {
+				&.youtube-link {
 					&:hover {
 						i {
 							color: rgb(59,89,152);
 						}
 					}
 				}
-				&.twitter-link {
+				&.github-link {
 					&:hover {
 						i {
 							color: rgb(85,172,238);
@@ -1691,14 +1691,14 @@ blockquote {
 					color:$color_2;
 					@include transition(.3s ease);
 				}
-				&.facebook-link {
+				&.youtube-link {
 					&:hover {
 						i {
 							color: rgb(59,89,152);
 						}
 					}
 				}
-				&.twitter-link {
+				&.github-link {
 					&:hover {
 						i {
 							color: rgb(85,172,238);
