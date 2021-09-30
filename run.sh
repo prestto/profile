@@ -1,4 +1,3 @@
-
 #!/bin/bash
 cecho() {
     LB='\033[1;36m' # Light Blue
@@ -29,7 +28,17 @@ cecho() {
 
 function run_up {
     cecho "BL" "running server..."
-    docker run --rm -d -p 8080:80 --name tpprofile -v ~/projects/profile/html:/usr/share/nginx/html nginx
+    docker run --rm -p 8080:80 --name tpprofile -v ~/projects/profile/html:/usr/share/nginx/html nginx
+}
+
+function run_build {
+    cecho "BL" "Building image..."
+    docker build -t profile .
+}
+
+function run_run {
+    cecho "BL" "Running image"
+    docker run --rm -d -p 8080:80 --name profile profile
 }
 
 function show_help {
@@ -48,6 +57,12 @@ fi
 case "$1" in
 up)
     run_up
+    ;;
+build)
+    run_build
+    ;;
+run)
+    run_run
     ;;
 *)
     show_help
