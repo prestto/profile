@@ -23,6 +23,9 @@ docker tag profile user632716/profile
 
 # push to dockerhub
 docker push user632716/profile
+
+# redeploy on k8s
+kubectl rollout restart deploy/profile-deployment
 ```
 
 ## Ingress
