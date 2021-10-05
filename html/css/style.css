@@ -46,7 +46,20 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, a
   font: inherit;
   vertical-align: baseline; }
 
-html, body {
+* {
+    scrollbar-color: #454a4d #202324;
+}
+
+:root {
+    --darkreader-neutral-background: #131516;
+    --darkreader-neutral-text: #d8d4cf;
+    --darkreader-selection-background: #004daa;
+    --darkreader-selection-text: #e8e6e3;
+}
+body {
+    color: rgb(154, 146, 132);
+}
+  html, body {
   height: inherit;
   width: inherit;
   min-height: inherit; }
@@ -918,7 +931,7 @@ blockquote {
 /*Header*/
 .mdl-layout__title, .mdl-layout-title {
   text-transform: capitalize;
-  color: #444;
+  color: #fff;
   font-weight: 700; }
 
 .mdl-layout__container {
@@ -935,11 +948,13 @@ blockquote {
   position: fixed;
   left: 0;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.03), 0 3px 1px -2px rgba(0, 0, 0, 0.03), 0 1px 5px 0 rgba(0, 0, 0, 0.03);
-  background: #fff; }
+  background: #2b2b2b;
+  color: #848484;
+}
   .mdl-layout__header .mdl-layout__header-row .mdl-navigation li {
     cursor: pointer; }
   .mdl-layout__header .mdl-layout__header-row .mdl-navigation .mdl-navigation__link {
-    color: #444;
+    color: #fff;
     text-transform: capitalize;
     padding: 0 15px;
     position: relative;
@@ -970,11 +985,13 @@ blockquote {
     .mdl-layout__header .mdl-layout__header-row .mdl-navigation li.active .mdl-navigation__link:after {
       width: 100%; }
   .mdl-layout__header .mdl-layout__drawer-button {
-    color: #444; }
+    color: #fff; 
+}
     .mdl-layout__header .mdl-layout__drawer-button:focus {
       outline: none; }
   .mdl-layout__header .mdl-button--icon.ver-more-btn {
-    color: #444; }
+    color: #fff;
+ }
 
 .mdl-layout__obfuscator {
   background-color: transparent !important; }
