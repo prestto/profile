@@ -24,3 +24,7 @@ docker tag profile user632716/profile
 # push to dockerhub
 docker push user632716/profile
 ```
+
+## Ingress
+
+To set up ingress, see the [ingress repo](https://github.com/prestto/ingress).
