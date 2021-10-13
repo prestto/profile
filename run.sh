@@ -41,11 +41,24 @@ function run_run {
     docker run --rm -d -p 8080:80 --name profile profile
 }
 
+function run_push {
+    cecho "BL" "Pushing"
+    docker push user632716/profile:latest
+}
+
+function run_rollout {
+    cecho "BL" "Rolling out"
+    kubectl --context kubernetes-admin@perso rollout restart deploy/profile-deployment
+}
+
 function show_help {
     cecho "Help: $0 <ACTION>"
     cecho "Parameters :"
     cecho " - ACTION values :"
     cecho "   * up                            - Run nginx."
+    cecho "   * build                         - Build docker image."
+    cecho "   * run                           - Run docker image."
+    cecho "   * push                          - Push docker image to dockerhub: user632716/profile:latest."
 }
 
 if [[ "$1" == "" ]]; then
@@ -63,6 +76,12 @@ build)
     ;;
 run)
     run_run
+    ;;
+push)
+    run_push
+    ;;
+rollout)
+    run_rollout
     ;;
 *)
     show_help
