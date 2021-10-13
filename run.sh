@@ -26,7 +26,7 @@ cecho() {
     esac
 }
 
-function run_up {
+function run_dev {
     cecho "BL" "running server..."
     docker run --rm -p 8080:80 --name tpprofile -v ~/projects/profile/html:/usr/share/nginx/html nginx
 }
@@ -38,12 +38,12 @@ function run_build {
 
 function run_run {
     cecho "BL" "Running image"
-    docker run --rm -d -p 8080:80 --name profile profile
+    docker run --rm -d -p 8080:80 --name profile user632716/profile
 }
 
 function run_push {
     cecho "BL" "Pushing"
-    docker push user632716/profile:latest
+    docker push user632716/profile
 }
 
 function run_rollout {
@@ -52,13 +52,14 @@ function run_rollout {
 }
 
 function show_help {
-    cecho "Help: $0 <ACTION>"
-    cecho "Parameters :"
-    cecho " - ACTION values :"
-    cecho "   * up                            - Run nginx."
-    cecho "   * build                         - Build docker image."
-    cecho "   * run                           - Run docker image."
-    cecho "   * push                          - Push docker image to dockerhub: user632716/profile:latest."
+    cecho "BL" "Help: $0 <ACTION>"
+    cecho "BL" "Parameters :"
+    cecho "BL" " - ACTION values :"
+    cecho "BL" "   * dev                           - Run nginx in docker container with mounted volume."
+    cecho "BL" "   * build                         - Build docker image."
+    cecho "BL" "   * run                           - Run docker image."
+    cecho "BL" "   * push                          - Push docker image to dockerhub: user632716/profile."
+    cecho "BL" "   * rollout                       - Redeploy on prod k8s using dockerhub image."
 }
 
 if [[ "$1" == "" ]]; then
@@ -68,8 +69,8 @@ if [[ "$1" == "" ]]; then
 fi
 
 case "$1" in
-up)
-    run_up
+dev)
+    run_dev
     ;;
 build)
     run_build

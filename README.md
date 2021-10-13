@@ -19,13 +19,13 @@ Note that this project is not original, but all work in the **projects** section
 docker login
 
 # tag image
-docker tag profile user632716/profile
+./run.sh build
 
 # push to dockerhub
-docker push user632716/profile
+./run.sh push
 
 # redeploy on k8s
-kubectl rollout restart deploy/profile-deployment
+./run.sh rollout
 ```
 
 ## Ingress
