@@ -33,17 +33,17 @@ function run_dev {
 
 function run_build {
     cecho "BL" "Building image..."
-    docker build -t profile .
+    docker build -t user632716/profile:latest .
 }
 
 function run_run {
     cecho "BL" "Running image"
-    docker run --rm -d -p 8080:80 --name profile user632716/profile
+    docker run --rm -d -p 8080:80 --name profile user632716/profile:latest
 }
 
 function run_push {
     cecho "BL" "Pushing"
-    docker push user632716/profile
+    docker push user632716/profile:latest
 }
 
 function run_rollout {
