@@ -4,17 +4,19 @@ A website brought from Hencework and adapted to fit my CV.
 
 Note that this project is not original, but all work in the **projects** section is.
 
-## build
+## dev
+
+To run a dev server:
 
 ```bash
-# build image
-# docker build -t profile .
-./run.sh build
+./run.sh dev
+```
 
-# run image
-# docker run --rm -d -p 8080:80 --name profile profile
-./run.sh run
+## prod
 
+To push to prod:
+
+```bash
 # login to docker hub
 docker login
 
