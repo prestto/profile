@@ -27,7 +27,7 @@ cecho() {
 }
 
 function run_dev {
-    cecho "BL" "running server..."
+    cecho "BL" "running server on http://127.0.0.1:8080/..."
     docker run --rm -p 8080:80 --name tpprofile -v ~/projects/profile/html:/usr/share/nginx/html nginx
 }
 
